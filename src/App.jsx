@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import ToggleButtons from "./components/ToggleButtons";
+import Footer from "./components/Footer";
+import Newsletter from "./components/Newsletter";
 
 function App() {
   const [isActive, setIsActive] = useState(true);
@@ -16,6 +18,8 @@ function App() {
         isActive={isActive}
         handleToggle={handleToggle}
       ></ToggleButtons>
+      <Newsletter></Newsletter>
+      <Footer></Footer>
     </>
   );
 }
