@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="bg-transparent px-4">
+      <div className="bg-transparent px-4 lg:px-0">
         <div className="navbar container mx-auto">
           <div className="flex-1">
             <div>

@@ -4,7 +4,7 @@ import bgShadow from "../assets/bg-shadow.png";
 
 const Banner = ({ addCoins }) => {
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 lg:p-0">
       <div
         style={{
           backgroundImage: `url(${bgShadow})`,

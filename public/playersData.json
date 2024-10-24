@@ -76,16 +76,6 @@
   },
 
   {
-    "name": "Andre Russell",
-    "country": "West Indies",
-    "role": "All-Rounder",
-    "rating": "Right-Hand-Bat",
-    "batting_style": "Right-Hand-Bat",
-    "price": 2500000,
-    "image": "https://i.ibb.co.com/yg7hB82/russell.webp"
-  },
-
-  {
     "name": "Trent Boult",
     "country": "New Zealand",
     "role": "Bowler",
