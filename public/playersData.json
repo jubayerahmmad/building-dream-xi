@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Virat Kohli",
+    "country": "India",
+    "role": "Batsman",
+    "rating": "Right-Hand-Bat",
+    "batting_style": "Right-Hand-Bat",
+    "price": 2400000,
+    "image": "https://i.ibb.co.com/PrGptYB/virat-kohli.jpg"
+  },
+  {
+    "name": "Ben Stokes",
+    "country": "England",
+    "role": "All-Rounder",
+    "rating": "Left-Hand-Bat",
+    "batting_style": "Left-Hand-Bat",
+    "price": 2200000,
+    "image": "https://i.ibb.co.com/bNYfh99/ben-stokes.jpg"
+  },
+  {
+    "name": "Kane Williamson",
+    "country": "New Zealand",
+    "role": "Batsman",
+    "rating": "Right-Hand-Bat",
+    "batting_style": "Right-Hand-Bat",
+    "price": 2000000,
+    "image": "https://i.ibb.co.com/SRC0yPJ/kane-williamson.webp"
+  },
+  {
+    "name": "Pat Cummins",
+    "country": "Australia",
+    "role": "Bowler",
+    "rating": "Right-Hand-Bowl",
+    "batting_style": "Right-Hand-Bat",
+    "price": 3000000,
+    "image": "https://i.ibb.co.com/dM587RG/pat-cummins.webp"
+  },
+
+  {
+    "name": "David Warner",
+    "country": "Australia",
+    "role": "Batsman",
+    "rating": "Left-Hand-Bat",
+    "batting_style": "Left-Hand-Bat",
+    "price": 1700000,
+    "image": "https://i.ibb.co.com/GtVZKHw/warner.jpg"
+  },
+
+  {
+    "name": "AB de Villiers",
+    "country": "South Africa",
+    "role": "Batsman",
+    "rating": "Right-Hand-Bat",
+    "batting_style": "Right-Hand-Bat",
+    "price": 1500000,
+    "image": "https://i.ibb.co.com/T2sy4gf/121344-zhzbianuuw-1621417915.jpg"
+  },
+  {
+    "name": "Mitchell Starc",
+    "country": "Australia",
+    "role": "Bowler",
+    "rating": "Left-Hand-Bowl",
+    "batting_style": "Left-Hand-Bat",
+    "price": 2000000,
+    "image": "https://i.ibb.co.com/KKcp36J/Mitchell-Starcin-CWC2023.webp"
+  },
+
+  {
+    "name": "Glenn Maxwell",
+    "country": "Australia",
+    "role": "All-Rounder",
+    "rating": "Right-Hand-Bat",
+    "batting_style": "Right-Hand-Bat",
+    "price": 1900000,
+    "image": "https://i.ibb.co.com/rdtb41F/Glenn-Maxwell.jpg"
+  },
+
+  {
+    "name": "Andre Russell",
+    "country": "West Indies",
+    "role": "All-Rounder",
+    "rating": "Right-Hand-Bat",
+    "batting_style": "Right-Hand-Bat",
+    "price": 2500000,
+    "image": "https://i.ibb.co.com/yg7hB82/russell.webp"
+  },
+
+  {
+    "name": "Trent Boult",
+    "country": "New Zealand",
+    "role": "Bowler",
+    "rating": "Left-Hand-Bowl",
+    "batting_style": "Left-Hand-Bat",
+    "price": 1800000,
+    "image": "https://i.ibb.co.com/4VPw5j8/trent-boult.webp"
+  }
+]
