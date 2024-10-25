@@ -7,7 +7,11 @@ const Players = ({ availablePlayers, choosePlayer }) => {
         <div key={index}>
           <div className="card bg-base-100 border-2">
             <figure className="p-4">
-              <img src={player.image} alt="Shoes" className="rounded-xl" />
+              <img
+                src={player.image}
+                alt="Shoes"
+                className="h-64 w-full rounded-xl object-cover"
+              />
             </figure>
             <div className="card-body">
               <div className="flex items-center gap-2">

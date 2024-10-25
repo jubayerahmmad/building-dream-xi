@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 const Navbar = ({ addCoins, coins }) => {
   return (
     <>
-      <div className="bg-transparent px-4 lg:px-0">
-        <div className="navbar container mx-auto">
+      <div className="px-4 lg:px-0 bg-transparent backdrop-blur-md sticky top-0 w-full z-10">
+        <div className="navbar container mx-auto ">
           <div className="flex-1">
             <div>
               <img className="" src={logo} alt="" />
