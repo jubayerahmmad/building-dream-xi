@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { ToastContainer } from "react-toastify";
 const Players = ({ availablePlayers, choosePlayer }) => {
   return (
     <div className="container mx-auto p-4 lg:p-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-96">
@@ -39,6 +40,7 @@ const Players = ({ availablePlayers, choosePlayer }) => {
                   >
                     Choose Player
                   </button>
+                  <ToastContainer autoClose={2000}></ToastContainer>
                 </div>
               </div>
             </div>

@@ -3,6 +3,9 @@ import Navbar from "./components/Navbar";
 import ToggleButtons from "./components/ToggleButtons";
 import Footer from "./components/Footer";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function App() {
   const [coins, setCoins] = useState(0);
 
@@ -37,11 +40,15 @@ function App() {
     const isExist = selectedPlayers.find((plr) => plr.name === player.name);
     if (!isExist) {
       if (playerPrice > coins) {
-        alert("Not Enough Coins");
+        toast.error("Not Enough Coins", {
+          position: "top-center",
+        });
       } else {
         setCoins(coins - playerPrice);
         if (totalSelected > 5) {
-          alert("Slot FullFilled");
+          toast.error("Slot FullFilled", {
+            position: "top-center",
+          });
         } else {
           const selected = [...selectedPlayers, player];
           setTotalSelected(totalSelected + 1);
@@ -49,7 +56,9 @@ function App() {
         }
       }
     } else {
-      alert("Already Added");
+      toast.error("Already Added", {
+        position: "top-center",
+      });
     }
   };
 
@@ -59,6 +68,7 @@ function App() {
     setSelectedPlayers(remove);
     setTotalSelected(totalSelected - 1);
     setCoins(coins + playerPrice);
+    toast.success("Deleted");
   };
 
   //add more button func
@@ -81,6 +91,7 @@ function App() {
         handleToggle={handleToggle}
         deletePlayer={deletePlayer}
         addMore={addMore}
+        ToastContainer={ToastContainer}
       ></ToggleButtons>
 
       <Footer></Footer>

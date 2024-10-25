@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import Players from "./Players";
 import Selected from "./Selected";
+
 const ToggleButtons = ({
   handleToggle,
   isActive,
