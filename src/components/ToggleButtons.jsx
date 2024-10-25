@@ -25,9 +25,9 @@ const ToggleButtons = ({
         </div>
         <div className="inline-flex  border-2 rounded-lg">
           <button
-            onClick={handleToggle}
+            onClick={() => handleToggle(true)}
             className={
-              isActive
+              isActive.active
                 ? "px-2 lg:px-4 py-1 lg:py-2 bg-[#E7FE29] font-bold "
                 : "px-2 lg:px-4 py-1 lg:py-2 bg-slate-100 "
             }
@@ -35,10 +35,10 @@ const ToggleButtons = ({
             Available
           </button>
           <button
-            onClick={handleToggle}
+            onClick={() => handleToggle(false)}
             className={
-              isActive
-                ? "px-2 lg:px-4 py-1 lg:py-2 border-l bg-slate-100 "
+              isActive.active
+                ? "px-2 lg:px-4 py-1 lg:py-2 border-l bg-slate-100"
                 : "px-2 lg:px-4 py-1 lg:py-2 border-l bg-[#E7FE29] font-bold"
             }
           >
@@ -47,7 +47,7 @@ const ToggleButtons = ({
         </div>
       </div>
 
-      {isActive ? (
+      {isActive.active ? (
         <Players
           availablePlayers={availablePlayers}
           coins={coins}

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="relative">
       <Newsletter></Newsletter>
-      <footer className="bg-slate-900 text-white lg:pt-40">
+      <footer className="bg-slate-900 text-white pt-12 lg:pt-40">
         <div className="lg:flex items-center justify-center p-4">
           <img src={footerLogo} alt="" />
         </div>

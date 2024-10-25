@@ -9,7 +9,9 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   const [coins, setCoins] = useState(0);
 
-  const [isActive, setIsActive] = useState(true);
+  const [isActive, setIsActive] = useState({
+    active: true,
+  });
 
   const [availablePlayers, setAvailablePlayers] = useState([]);
 
@@ -29,10 +31,10 @@ function App() {
   };
 
   //toggle button func
-  const handleToggle = () => {
-    if (isActive) {
-      setIsActive(!true);
-    } else setIsActive(!false);
+  const handleToggle = (active) => {
+    if (active) {
+      setIsActive({ active: true });
+    } else setIsActive({ active: false });
   };
 
   // choose player button func
@@ -72,10 +74,10 @@ function App() {
   };
 
   //add more button func
-  const addMore = () => {
-    if (isActive) {
-      setIsActive(!true);
-    } else setIsActive(!false);
+  const addMore = (active) => {
+    if (active) {
+      setIsActive({ active: true });
+    } else setIsActive({ active: false });
   };
 
   return (

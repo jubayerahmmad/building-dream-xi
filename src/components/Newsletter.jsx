@@ -16,18 +16,22 @@ const Newsletter = () => {
             <h1 className="text-xl lg:text-4xl text-black text-center font-bold">
               Subscribe to Our Newsletter
             </h1>
-            <p className="text-gray-500 lg:text-xl">
+            <p className="text-gray-500 lg:text-xl text-center">
               Get the latest updates and news right in your inbox!
             </p>
-            <div className="flex gap-2">
-              <input
-                className="border-2 px-2 py-1 lg:px-8 lg:py-2.5 rounded-xl"
-                type="text"
-                placeholder="Your Email"
-              />
-              <button className="btn bg-[#E7FE29] btn-sm lg:btn-md rounded-xl text-md lg:text-xl font-bold">
-                Subscribe
-              </button>
+            <div className="lg:flex gap-2 mx-4 space-y-2 lg:space-y-0">
+              <div>
+                <input
+                  className="border-2 px-2 py-1 lg:px-8 lg:py-2.5 rounded-xl"
+                  type="text"
+                  placeholder="Your Email"
+                />
+              </div>
+              <div>
+                <button className="btn bg-[#E7FE29] btn-sm lg:btn-md rounded-xl text-md lg:text-xl font-bold w-full">
+                  Subscribe
+                </button>
+              </div>
             </div>
           </div>
         </div>
