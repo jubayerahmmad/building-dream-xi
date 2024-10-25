@@ -18,7 +18,7 @@ const ToggleButtons = ({
       <div className="container mx-auto flex justify-between items-center my-4 p-4 lg:p-0">
         <div>
           <h1 className="text-lg lg:text-2xl font-bold">
-            {isActive
+            {isActive.active
               ? "Available Players"
               : `Selected Players ${totalSelected}/6`}
           </h1>
