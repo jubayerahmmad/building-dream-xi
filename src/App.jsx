@@ -2,14 +2,16 @@ import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import ToggleButtons from "./components/ToggleButtons";
 import Footer from "./components/Footer";
-import Players from "./components/Players";
 
 function App() {
-  const [isActive, setIsActive] = useState(true);
   const [coins, setCoins] = useState(0);
 
+  const [isActive, setIsActive] = useState(true);
+
   const [availablePlayers, setAvailablePlayers] = useState([]);
+
   const [selectedPlayers, setSelectedPlayers] = useState([]);
+
   const [totalSelected, setTotalSelected] = useState(0);
 
   useEffect(() => {
@@ -18,36 +20,53 @@ function App() {
       .then((data) => setAvailablePlayers(data));
   }, []);
 
+  //add coins functions
   const addCoins = () => {
     setCoins(coins + 2500000);
   };
 
-  const choosePlayer = (removedCoins, player) => {
-    if (removedCoins > coins) {
-      alert("Not Enough Coins");
-    } else {
-      setCoins(coins - removedCoins);
-      if (totalSelected > 5) {
-        alert("Enough");
-      } else {
-        const selected = [...selectedPlayers, player];
-        setTotalSelected(totalSelected + 1);
-        setSelectedPlayers(selected);
-        console.log(selected);
-      }
-      // console.log(player);
-    }
-  };
-
-  const addMorePlayer = (availablePlayers) => {
-    console.log(availablePlayers);
-  };
-
+  //toggle button func
   const handleToggle = () => {
     if (isActive) {
       setIsActive(!true);
     } else setIsActive(!false);
   };
+
+  // choose player button func
+  const choosePlayer = (playerPrice, player) => {
+    const isExist = selectedPlayers.find((plr) => plr.name === player.name);
+    if (!isExist) {
+      if (playerPrice > coins) {
+        alert("Not Enough Coins");
+      } else {
+        setCoins(coins - playerPrice);
+        if (totalSelected > 5) {
+          alert("Slot FullFilled");
+        } else {
+          const selected = [...selectedPlayers, player];
+          setTotalSelected(totalSelected + 1);
+          setSelectedPlayers(selected);
+        }
+      }
+    } else {
+      alert("Already Added");
+    }
+  };
+
+  // delete player button func
+  const deletePlayer = (name) => {
+    const remove = selectedPlayers.filter((player) => player.name !== name);
+    setSelectedPlayers(remove);
+    setTotalSelected(totalSelected - 1);
+  };
+
+  //add more button func
+  const addMore = () => {
+    if (isActive) {
+      setIsActive(!true);
+    } else setIsActive(!false);
+  };
+
   return (
     <>
       <Navbar coins={coins} addCoins={addCoins}></Navbar>
@@ -59,7 +78,8 @@ function App() {
         coins={coins}
         isActive={isActive}
         handleToggle={handleToggle}
-        addMorePlayer={addMorePlayer}
+        deletePlayer={deletePlayer}
+        addMore={addMore}
       ></ToggleButtons>
 
       <Footer></Footer>

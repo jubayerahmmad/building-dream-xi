@@ -9,7 +9,8 @@ const ToggleButtons = ({
   selectedPlayers,
   totalSelected,
   choosePlayer,
-  addMorePlayer,
+  deletePlayer,
+  addMore,
 }) => {
   return (
     <>
@@ -53,9 +54,11 @@ const ToggleButtons = ({
         ></Players>
       ) : (
         <Selected
+          availablePlayers={availablePlayers}
           selectedPlayers={selectedPlayers}
           totalSelected={totalSelected}
-          addMorePlayer={addMorePlayer}
+          deletePlayer={deletePlayer}
+          addMore={addMore}
         ></Selected>
       )}
     </>
@@ -65,8 +68,10 @@ const ToggleButtons = ({
 ToggleButtons.propTypes = {
   handleToggle: PropTypes.func.isRequired,
   choosePlayer: PropTypes.func.isRequired,
+  addMore: PropTypes.func.isRequired,
   availablePlayers: PropTypes.array.isRequired,
   selectedPlayers: PropTypes.array.isRequired,
+  deletePlayer: PropTypes.func,
   isActive: PropTypes.bool.isRequired,
   coins: PropTypes.number.isRequired,
   totalSelected: PropTypes.number.isRequired,

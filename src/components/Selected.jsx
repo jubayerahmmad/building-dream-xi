@@ -1,7 +1,5 @@
 import PropTypes from "prop-types";
-const Selected = ({ selectedPlayers, addMorePlayer }) => {
-  console.log(selectedPlayers);
-
+const Selected = ({ selectedPlayers, deletePlayer, addMore }) => {
   return (
     <div className="container mx-auto p-4 lg:p-0 mb-96">
       <div>
@@ -23,8 +21,10 @@ const Selected = ({ selectedPlayers, addMorePlayer }) => {
               </div>
             </div>
             <div>
-              <button className="btn btn-outline text-error">
-                {" "}
+              <button
+                onClick={() => deletePlayer(player.name)}
+                className="btn btn-outline text-error"
+              >
                 <i className="fa-solid fa-trash"></i>Delete
               </button>
             </div>
@@ -32,10 +32,10 @@ const Selected = ({ selectedPlayers, addMorePlayer }) => {
         ))}
         <div>
           <button
-            onClick={addMorePlayer}
+            onClick={addMore}
             className="btn bg-[#E7FE29]  border-2 border-black rounded-xl text-xl font-bold"
           >
-            Add More
+            Add Players
           </button>
         </div>
       </div>
@@ -45,6 +45,7 @@ const Selected = ({ selectedPlayers, addMorePlayer }) => {
 
 Selected.propTypes = {
   selectedPlayers: PropTypes.array,
-  addMorePlayer: PropTypes.func,
+  deletePlayer: PropTypes.func,
+  addMore: PropTypes.func,
 };
 export default Selected;

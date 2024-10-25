@@ -51,7 +51,6 @@ const Players = ({ availablePlayers, choosePlayer }) => {
 
 Players.propTypes = {
   availablePlayers: PropTypes.array.isRequired,
-
   choosePlayer: PropTypes.func.isRequired,
 };
 
