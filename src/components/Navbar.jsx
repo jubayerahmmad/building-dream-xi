@@ -1,13 +1,7 @@
-import { useState } from "react";
 import logo from "../assets/logo.png";
 import Banner from "./Banner";
-const Navbar = () => {
-  const [coins, setCoins] = useState(0);
-
-  const addCoins = () => {
-    setCoins(coins + 1800000);
-  };
-
+import PropTypes from "prop-types";
+const Navbar = ({ addCoins, coins }) => {
   return (
     <>
       <div className="bg-transparent px-4 lg:px-0">
@@ -44,6 +38,11 @@ const Navbar = () => {
       <Banner addCoins={addCoins}></Banner>
     </>
   );
+};
+
+Navbar.propTypes = {
+  addCoins: PropTypes.func.isRequired,
+  coins: PropTypes.number.isRequired,
 };
 
 export default Navbar;

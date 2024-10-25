@@ -1,28 +1,35 @@
-import banner from "../assets/banner-main.png";
 import bgShadow from "../assets/bg-shadow.png";
 const Newsletter = () => {
   return (
-    <div>
-      <div className="container mx-auto p-4 lg:p-0 z-10 ring-offset-8 ring-offset-red ring-2 ring-black rounded-xl">
-        <div
-          style={{
-            backgroundImage: `url(${bgShadow})`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            zIndex: 1,
-          }}
-          className="flex flex-col items-center justify-center content-center rounded-xl p-8 lg:p-24 bg-white space-y-4"
-        >
-          <img src={banner} alt="" />
-          <h1 className="text-xl lg:text-4xl text-white text-center font-bold">
-            Assemble Your Ultimate Dream 11 Cricket Team
-          </h1>
-          <p className="text-gray-500 lg:text-xl">
-            Beyond Boundaries Beyond Limits
-          </p>
-          <button className="btn bg-[#E7FE29] ring-offset-8 ring-offset-black ring-1 ring-[#E7FE29] rounded-xl text-xl font-bold">
-            Claim Free Credit
-          </button>
+    <div className="absolute left-1/2 -top-64 lg:-top-60 -translate-x-1/2 px-10 lg:px-0 container mx-auto">
+      <div className="p-4 border-2 border-white rounded-3xl bg-transparent backdrop-blur-lg">
+        <div className="container mx-auto rounded-3xl">
+          <div
+            style={{
+              backgroundImage: `url(${bgShadow})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              zIndex: 1,
+            }}
+            className="flex flex-col items-center justify-center content-center rounded-xl p-8 lg:p-24 bg-white space-y-4"
+          >
+            <h1 className="text-xl lg:text-4xl text-black text-center font-bold">
+              Subscribe to Our Newsletter
+            </h1>
+            <p className="text-gray-500 lg:text-xl">
+              Get the latest updates and news right in your inbox!
+            </p>
+            <div className="flex gap-2">
+              <input
+                className="border-2 px-2 py-1 lg:px-8 lg:py-2.5 rounded-xl"
+                type="text"
+                placeholder="Your Email"
+              />
+              <button className="btn bg-[#E7FE29] btn-sm lg:btn-md rounded-xl text-md lg:text-xl font-bold">
+                Subscribe
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

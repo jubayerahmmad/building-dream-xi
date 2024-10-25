@@ -1,13 +1,15 @@
 import footerLogo from "../assets/logo-footer.png";
+import Newsletter from "./Newsletter";
 
 const Footer = () => {
   return (
-    <div>
-      <footer className="bg-slate-900 text-white p-64 ">
-        <div className="lg:flex items-center justify-center">
+    <div className="relative">
+      <Newsletter></Newsletter>
+      <footer className="bg-slate-900 text-white lg:pt-40">
+        <div className="lg:flex items-center justify-center p-4">
           <img src={footerLogo} alt="" />
         </div>
-        <div className="lg:flex gap-4 space-y-4 p-10">
+        <div className="lg:flex gap-4 space-y-4 p-6 lg:p-10  border-b-2 border-gray-500">
           <div className="lg:w-1/3">
             <h6 className="footer-title">About Us</h6>
             <p>
@@ -30,25 +32,21 @@ const Footer = () => {
           </nav>
           <form className="lg:w-1/3">
             <h6 className="footer-title">Newsletter</h6>
-            <fieldset className="form-control w-80">
-              <label className="label">
-                <span className="label-text">Enter your email address</span>
-              </label>
+            <fieldset className="form-control w-64">
               <div className="join">
                 <input
                   type="text"
-                  placeholder="username@site.com"
+                  placeholder="Your Email"
                   className="input input-bordered join-item"
                 />
-                <button className="btn bg-[#E7FE29] join-item">
+                <button className="btn font-bold bg-[#E7FE29] join-item">
                   Subscribe
                 </button>
               </div>
             </fieldset>
           </form>
         </div>
-        <div className="divider"></div>
-        <div className="text-center">
+        <div className="text-center py-4">
           <h1>@2024 Dream XI All Rights Reserved.</h1>
         </div>
       </footer>

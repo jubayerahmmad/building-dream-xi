@@ -1,16 +1,7 @@
-import { useEffect, useState } from "react";
-
-const Players = () => {
-  const [availablePlayers, setAvailablePlayers] = useState([]);
-
-  useEffect(() => {
-    fetch("./playersData.json")
-      .then((res) => res.json())
-      .then((data) => setAvailablePlayers(data));
-  }, []);
-
+import PropTypes from "prop-types";
+const Players = ({ availablePlayers, choosePlayer }) => {
   return (
-    <div className="container mx-auto p-4 lg:p-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+    <div className="container mx-auto p-4 lg:p-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-96">
       {availablePlayers.map((player, index) => (
         <div key={index}>
           <div className="card bg-base-100 border-2">
@@ -42,7 +33,10 @@ const Players = () => {
                 </div>
                 <div className="flex justify-between items-center">
                   <p className="font-semibold">Price: $ {player.price}</p>
-                  <button className="btn btn-sm btn-outline">
+                  <button
+                    onClick={() => choosePlayer(player.price, player)}
+                    className="btn btn-sm btn-outline"
+                  >
                     Choose Player
                   </button>
                 </div>
@@ -53,6 +47,12 @@ const Players = () => {
       ))}
     </div>
   );
+};
+
+Players.propTypes = {
+  availablePlayers: PropTypes.array.isRequired,
+
+  choosePlayer: PropTypes.func.isRequired,
 };
 
 export default Players;
