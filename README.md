@@ -12,8 +12,21 @@ A dynamic web application that allows users to build their dream cricket team by
 
 ## Key Features
 
-1. **Player Selection**: Choose from a diverse roster of international cricket players, each with unique stats and abilities.
+1. **Player Selection**: Choose from a diverse roster of international cricket players, each with detailed stats including name, country, role, rating, batting style, and price.
 
-2. **Budget Management**: Manage a virtual budget of coins to strategically build your team, balancing player costs with team strength.
+2. **Budget Management**: Manage a virtual budget of 2,500,000 coins, with an option to add more. Strategically build your team by balancing player costs with team composition.
 
-3. **Interactive UI**: Enjoy a user-friendly interface with toggle buttons for easy navigation between available players and your selected team.
+3. **Interactive UI**:
+
+   - Toggle between "Available Players" and "Selected Players" views.
+   - View player cards with images and key information.
+   - "Choose Player" and "Delete Player" buttons for team management.
+   - Real-time updates of remaining budget and selected player count.
+
+4. **Team Building Rules**:
+
+   - Select up to 6 players for your dream team.
+   - Prevent duplicate player selections.
+   - Alert system for insufficient funds or full team roster.
+
+5. **Responsive Design**: Enjoy a seamless experience across desktop and mobile devices with a grid-based layout that adapts to different screen sizes.

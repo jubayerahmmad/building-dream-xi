@@ -22,7 +22,7 @@ const Selected = ({ selectedPlayers, deletePlayer, addMore }) => {
             </div>
             <div>
               <button
-                onClick={() => deletePlayer(player.name)}
+                onClick={() => deletePlayer(player.name, player.price)}
                 className="btn btn-outline text-error"
               >
                 <i className="fa-solid fa-trash"></i>Delete

@@ -54,10 +54,11 @@ function App() {
   };
 
   // delete player button func
-  const deletePlayer = (name) => {
+  const deletePlayer = (name, playerPrice) => {
     const remove = selectedPlayers.filter((player) => player.name !== name);
     setSelectedPlayers(remove);
     setTotalSelected(totalSelected - 1);
+    setCoins(coins + playerPrice);
   };
 
   //add more button func
