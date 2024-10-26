@@ -49,7 +49,6 @@ function App() {
           position: "top-center",
         });
       } else {
-        setCoins(coins - playerPrice);
         if (totalSelected > 5) {
           toast.error("Slot Full", {
             position: "top-center",
@@ -57,6 +56,10 @@ function App() {
         } else {
           const selected = [...selectedPlayers, player];
           setTotalSelected(totalSelected + 1);
+          setCoins(coins - playerPrice);
+          toast.success("Successfully Added", {
+            position: "top-center",
+          });
           setSelectedPlayers(selected);
         }
       }
@@ -73,6 +76,9 @@ function App() {
     setSelectedPlayers(remove);
     setTotalSelected(totalSelected - 1);
     setCoins(coins + playerPrice);
+    toast.info("Player Removed", {
+      position: "top-center",
+    });
   };
 
   //add more button func

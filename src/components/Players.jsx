@@ -44,7 +44,7 @@ const Players = ({ availablePlayers, choosePlayer }) => {
                   >
                     Choose Player
                   </button>
-                  <ToastContainer autoClose={2000}></ToastContainer>
+                  <ToastContainer autoClose={1500}></ToastContainer>
                 </div>
               </div>
             </div>
