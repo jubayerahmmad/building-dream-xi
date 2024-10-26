@@ -7,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
+  //useState managements
   const [coins, setCoins] = useState(0);
 
   const [isActive, setIsActive] = useState({
@@ -18,6 +19,8 @@ function App() {
   const [selectedPlayers, setSelectedPlayers] = useState([]);
 
   const [totalSelected, setTotalSelected] = useState(0);
+
+  const [email, setEmail] = useState("");
 
   useEffect(() => {
     fetch("./playersData.json")
@@ -48,7 +51,7 @@ function App() {
       } else {
         setCoins(coins - playerPrice);
         if (totalSelected > 5) {
-          toast.error("Slot FullFilled", {
+          toast.error("Slot Full", {
             position: "top-center",
           });
         } else {
@@ -70,7 +73,6 @@ function App() {
     setSelectedPlayers(remove);
     setTotalSelected(totalSelected - 1);
     setCoins(coins + playerPrice);
-    toast.success("Deleted");
   };
 
   //add more button func
@@ -78,6 +80,21 @@ function App() {
     if (active) {
       setIsActive({ active: true });
     } else setIsActive({ active: false });
+  };
+
+  // subscribe button
+  const handleOnChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleSubscribe = () => {
+    if (email.includes("@")) {
+      localStorage.setItem("email", email);
+    } else {
+      toast.error("Enter Valid email", {
+        position: "top-center",
+      });
+    }
   };
 
   return (
@@ -96,7 +113,10 @@ function App() {
         ToastContainer={ToastContainer}
       ></ToggleButtons>
 
-      <Footer></Footer>
+      <Footer
+        handleOnChange={handleOnChange}
+        handleSubscribe={handleSubscribe}
+      ></Footer>
     </>
   );
 }

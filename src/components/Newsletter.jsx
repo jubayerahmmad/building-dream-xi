@@ -1,5 +1,6 @@
 import bgShadow from "../assets/bg-shadow.png";
-const Newsletter = () => {
+import PropTypes from "prop-types";
+const Newsletter = ({ handleOnChange, handleSubscribe }) => {
   return (
     <div className="absolute left-1/2 -top-64 lg:-top-60 -translate-x-1/2 px-10 lg:px-0 container mx-auto">
       <div className="p-4 border-2 border-white rounded-3xl bg-transparent backdrop-blur-lg">
@@ -23,12 +24,17 @@ const Newsletter = () => {
               <div>
                 <input
                   className="border-2 px-2 py-1 lg:px-8 lg:py-2.5 rounded-xl"
-                  type="text"
+                  onChange={handleOnChange}
+                  type="email"
                   placeholder="Your Email"
+                  autoComplete="on"
                 />
               </div>
               <div>
-                <button className="btn bg-[#E7FE29] btn-sm lg:btn-md rounded-xl text-md lg:text-xl font-bold w-full">
+                <button
+                  onClick={handleSubscribe}
+                  className="btn bg-[#E7FE29] btn-sm lg:btn-md rounded-xl text-md lg:text-xl font-bold w-full"
+                >
                   Subscribe
                 </button>
               </div>
@@ -38,6 +44,10 @@ const Newsletter = () => {
       </div>
     </div>
   );
+};
+Newsletter.propTypes = {
+  handleOnChange: PropTypes.func.isRequired,
+  handleSubscribe: PropTypes.func.isRequired,
 };
 
 export default Newsletter;

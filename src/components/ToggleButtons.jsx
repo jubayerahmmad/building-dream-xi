@@ -73,7 +73,7 @@ ToggleButtons.propTypes = {
   availablePlayers: PropTypes.array.isRequired,
   selectedPlayers: PropTypes.array.isRequired,
   deletePlayer: PropTypes.func,
-  isActive: PropTypes.bool.isRequired,
+  isActive: PropTypes.object.isRequired,
   coins: PropTypes.number.isRequired,
   totalSelected: PropTypes.number.isRequired,
 };

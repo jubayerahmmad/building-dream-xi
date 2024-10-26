@@ -1,10 +1,14 @@
 import footerLogo from "../assets/logo-footer.png";
 import Newsletter from "./Newsletter";
+import PropTypes from "prop-types";
 
-const Footer = () => {
+const Footer = ({ handleOnChange, handleSubscribe }) => {
   return (
     <div className="relative">
-      <Newsletter></Newsletter>
+      <Newsletter
+        handleOnChange={handleOnChange}
+        handleSubscribe={handleSubscribe}
+      ></Newsletter>
       <footer className="bg-slate-900 text-white pt-12 lg:pt-40">
         <div className="lg:flex items-center justify-center p-4">
           <img src={footerLogo} alt="" />
@@ -35,11 +39,15 @@ const Footer = () => {
             <fieldset className="form-control w-64">
               <div className="join">
                 <input
-                  type="text"
+                  onChange={handleOnChange}
+                  type="email"
                   placeholder="Your Email"
-                  className="input input-bordered join-item"
+                  className="input input-bordered join-item text-black"
                 />
-                <button className="btn font-bold bg-[#E7FE29] join-item">
+                <button
+                  onClick={handleSubscribe}
+                  className="btn font-bold bg-[#E7FE29] join-item"
+                >
                   Subscribe
                 </button>
               </div>
@@ -52,6 +60,11 @@ const Footer = () => {
       </footer>
     </div>
   );
+};
+
+Footer.propTypes = {
+  handleOnChange: PropTypes.func.isRequired,
+  handleSubscribe: PropTypes.func.isRequired,
 };
 
 export default Footer;
